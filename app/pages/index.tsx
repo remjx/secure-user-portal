@@ -3,6 +3,7 @@ import Layout from "app/layouts/Layout"
 import logout from "app/auth/mutations/logout"
 import { useCurrentUser } from "app/hooks/useCurrentUser"
 import { Suspense } from "react"
+import { Button } from '@chakra-ui/react';
 
 const UserInfo = () => {
   const currentUser = useCurrentUser()
@@ -11,14 +12,14 @@ const UserInfo = () => {
   if (currentUser) {
     return (
       <>
-        <button
+        <Button
           className="button small"
           onClick={async () => {
             await logoutMutation()
           }}
         >
           Logout
-        </button>
+        </Button>
         <div>
           User id: <code>{currentUser.id}</code>
           <br />
@@ -51,7 +52,7 @@ const Home: BlitzPage = () => {
         <div className="logo">
           <img src="/alpine-logo.jpg" alt="Alpine logo" />
         </div>
-        <div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+        <div>
           <Suspense fallback="Loading...">
             <UserInfo />
           </Suspense>
