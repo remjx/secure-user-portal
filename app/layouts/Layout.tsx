@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import { Head } from "blitz"
-import { Box } from '@chakra-ui/react';
-import { Logo } from '../components/Logo/index';
+import { Box, Container } from "@chakra-ui/react"
+import { Logo } from "app/components/Logo"
 
 type LayoutProps = {
   title?: string
@@ -18,9 +18,9 @@ const Layout = ({ title, children }: LayoutProps) => {
 
       <Box align="center">
         <Logo />
-        <div>
+        <Container bg="gray.100" mt={6} py={2}>
           {children}
-        </div>
+        </Container>
       </Box>
     </>
   )

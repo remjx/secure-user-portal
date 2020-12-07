@@ -4,6 +4,7 @@ import { LabeledTextField } from "app/components/LabeledTextField"
 import { Form, FORM_ERROR } from "app/components/Form"
 import login from "app/auth/mutations/login"
 import { LoginInput } from "app/auth/validations"
+import { Heading, Text } from "@chakra-ui/react"
 
 type LoginFormProps = {
   onSuccess?: () => void
@@ -14,7 +15,7 @@ export const LoginForm = (props: LoginFormProps) => {
 
   return (
     <div>
-      <h1>Login</h1>
+      <Heading as="h1">Log in</Heading>
 
       <Form
         submitText="Login"
@@ -40,9 +41,9 @@ export const LoginForm = (props: LoginFormProps) => {
         <LabeledTextField name="password" label="Password" placeholder="Password" type="password" />
       </Form>
 
-      <div style={{ marginTop: "1rem" }}>
+      <Text fontSize="sm" style={{ marginTop: "1rem" }}>
         Or <Link href="/signup">Sign Up</Link>
-      </div>
+      </Text>
     </div>
   )
 }
