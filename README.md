@@ -11,7 +11,8 @@ This is a take home assignment for a full-stack developer position I am really e
 
 ```
 git clone git@github.com:remjx/secure-user-portal.git
-npm install -g blitz
+cd secure-user-portal
 npm install
+npm install -g blitz
 blitz start
 ```
