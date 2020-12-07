@@ -42,7 +42,7 @@ export const LoginForm = (props: LoginFormProps) => {
       </Form>
 
       <Text fontSize="sm" style={{ marginTop: "1rem" }}>
-        Or <Link href="/signup">Sign Up</Link>
+        or <Link href="/signup">Sign Up</Link>
       </Text>
     </div>
   )

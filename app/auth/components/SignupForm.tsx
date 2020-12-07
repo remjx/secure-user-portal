@@ -1,11 +1,10 @@
 import React from "react"
-import { useMutation } from "blitz"
+import { useMutation, Link } from "blitz"
 import { LabeledTextField } from "app/components/LabeledTextField"
-import { LabeledSelect } from "app/components/LabeledSelect"
 import { Form, FORM_ERROR } from "app/components/Form"
 import signup from "app/auth/mutations/signup"
 import { SignupInput } from "app/auth/validations"
-import { Heading } from "@chakra-ui/react"
+import { Heading, Text } from "@chakra-ui/react"
 
 type SignupFormProps = {
   onSuccess?: () => void
@@ -47,6 +46,10 @@ export const SignupForm = (props: SignupFormProps) => {
           type="text"
         />
       </Form>
+
+      <Text fontSize="sm" style={{ marginTop: "1rem" }}>
+        or <Link href="/login">Log in</Link>
+      </Text>
     </div>
   )
 }

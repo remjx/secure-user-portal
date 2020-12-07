@@ -10,7 +10,7 @@ const ProfileData = () => {
   const router = useRouter()
   const currentUser = useCurrentUser()
   const [logoutMutation] = useMutation(logout)
-  const [userList] = useQuery(getUserList)
+  const [userList] = useQuery(getUserList, currentUser?.role)
   useEffect(() => {
     if (!currentUser) {
       router.push("/")
