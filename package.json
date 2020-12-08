@@ -6,6 +6,8 @@
     "studio": "blitz db studio",
     "build": "blitz build",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "pre-commit": "lint-staged && pretty-quick --staged",
+    "pre-push": "tsc && npm run lint && npm run test",
     "test": "jest",
     "test:watch": "jest --watch",
     "start:production": "blitz start --production --port $PORT",
@@ -23,17 +25,6 @@
   "prettier": {
     "semi": false,
     "printWidth": 100
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged",
-      "pre-push": "tsc && npm run lint && npm run test"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix"
-    ]
   },
   "dependencies": {
     "@chakra-ui/react": "1.0.2",
@@ -69,7 +60,6 @@
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "4.3.4",
     "jest": "26.6.3",
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-watch-typeahead": "0.6.1",
