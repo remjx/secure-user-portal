@@ -7,7 +7,7 @@ This is a take home assignment for a full-stack developer position I am really e
 - [Blitz.js](https://blitzjs.com/) full-stack React framework
 - [Chakra UI](https://chakra-ui.com/) for styling
 
-## How to run the app
+## Run in development
 
 ```
 git clone git@github.com:remjx/secure-user-portal.git
@@ -16,3 +16,5 @@ npm install
 npm install -g blitz
 blitz start
 ```
+
+## Heroku deployment
